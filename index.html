@@ -103,13 +103,23 @@
     .change-bg {
       width: 650px;
       height: 820px;
-      transform: translate(-60%, -30%);
+      transform: translate(-58%, -25%);
     }
 
     i {
       white-space: nowrap !important;
     }
   </style>
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#328bc0">
+  <meta name="msapplication-TileColor" content="#328bc0">
+  <meta name="theme-color" content="#328bc0">
+
 
   <title>Drehmal.cyou</title>
 </head>
@@ -135,13 +145,14 @@
         <li>
           <div class="bar"></div>
         </li>
+        <li><a href="#game" onclick="loadPage('game')"><i class="fa-solid fa-gamepad"></i> Game Maps</a></li>
         <li><a href="#iso" onclick="loadPage('iso')"><i class="fa-solid fa-layer-group"></i> Isometric Map</a></li>
         <li><a href="#2d" onclick="loadPage('2d')"><i class="fa-regular fa-map"></i> 2D Map</a></li>
         <li><a href="#3d" onclick="loadPage('3d')"><i class="fa-solid fa-earth-europe"></i> 3D Map</a></li>
         <li>
           <div class="bar"></div>
         </li>
-        <li><a href="https://www.drehmal.net/"><i class="fa-solid fa-arrow-up-right-from-square fa-bounce"></i> Official Website</a></li>
+        <li><a href="https://www.drehmal.net/" title="   Official Website"><i class="fa-solid fa-arrow-up-right-from-square fa-bounce"></i> Official Website</a></li>
         <li><a href="https://discord.com/invite/eBE3c3dz"><i class="fa-brands fa-discord"></i> Official Discord</a></li>
         <li><a href="https://www.planetminecraft.com/project/drehmal-v2-prim-rdial-12k-x-12k-survival-adventure-map/"><i class="fa-regular fa-thumbs-up"></i> Planet Minecraft</a></li>
 
@@ -169,6 +180,8 @@
           return "2d\/index.html";
         case "3d":
           return "3d\/index.html";
+        case "game":
+          return "game\/index.html"
         default:
           return "home.html";
       }
