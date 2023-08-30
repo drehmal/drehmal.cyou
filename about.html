@@ -18,33 +18,40 @@
 
 
   <ol>
-    <li>Download the map from the official website (https://www.drehmal.net/)</li>
-
-    <li>2D Map</li>
-    <ol>
-      <li>Download uNmINeD (https://unmined.net/)</li>
-      <li>Open the map in uNmINeD</li>
-      <li>Export the map</li>
-    </ol>
-
-    <li>Game Maps</li>
-    <ol>
-      <li>Download Papyri (https://github.com/jason-green-io/papyri)</li>
-      <li>Run Papyri: <code>python .\papyri.py --world ">Drehmal Map Path<" --type java --output "./GameMaps" </code>
-      </li>
-    </ol>
-
-    <li>3D Map</li>
-    <ol>
-      <li>Download Bluemap CLI (or use the practical Docker container with Docker Compose) (https://bluemap.bluecolored.de/wiki/getting-started/Installation.html#using-bluemap-on-the-cli--standalone)</li>
-      <li>Create configs for all the worlds</li>
-      <li>Run the CLI / Container</li>
-    </ol>
-
-    <li>Isometric Map</li>
-    <ol>
-      <li>TODO</li>
-    </ol>
+    <li>Download the map from the <a href="https://www.drehmal.net/" target="_blank" rel="noopener">official website</a></li>
+    <li>2D Map
+      <ol>
+        <li>Download <a href="https://unmined.net/" target="_blank" rel="noopener">uNmINeD</a></li>
+        <li>Open the map in uNmINeD</li>
+        <li>Export the map</li>
+      </ol>
+    </li>
+    <li>Game Maps
+      <ol>
+        <li>Download <a href="https://github.com/jason-green-io/papyri" target="_blank" rel="noopener">Papyri</a> &amp; install dependencies</li>
+        <li>Run Papyri: <code>python .\papyri.py --world "&gt;Drehmal Map Path&lt;" --type java --output "./GameMaps"</code></li>
+      </ol>
+    </li>
+    <li>3D Map
+      <ol>
+        <li>Download <a href="https://bluemap.bluecolored.de/wiki/getting-started/Installation.html#using-bluemap-on-the-cli--standalone" target="_blank" rel="noopener">Bluemap CLI</a> (or use the practical <a href="https://bluemap.bluecolored.de/wiki/getting-started/Installation.html#using-bluemap-docker-image" target="_blank" rel="noopener">Docker image</a>)</li>
+        <li>Create configs for all the worlds</li>
+        <li>Run the CLI / Container</li>
+      </ol>
+    </li>
+    <li>Isometric Map
+      <ol>
+        <li>Download <a href="https://overviewer.org/" target="_blank" rel="noopener">Minecraft Overviewer</a> &amp; install dependencies (or use the practical <a href="https://github.com/Zottelchen/docker-container/tree/main/overviewer" target="_blank" rel="noopener">Docker image</a> I made)</li>
+        <li><a href="https://dl.drehmal.cyou/2.2/drehmal_render.conf" target="_blank" rel="noopener">Download &amp; edit my config</a></li>
+        <li>Run the render</li>
+        <li>The <code>--genpoi</code> of Overviewer broke with 1.17, so instead use the alternative I wrote: <a href="https://github.com/Zottelchen/poigen/releases/tag/latest" target="_blank" rel="noopener">POIGen</a></li>
+        <li>Time to get required icon textures. TOBECOMPLETED</li>
+      </ol>
+    </li>
+    <li>Insert all folders into the page folder, you can get it <a href="https://github.com/drehmal/drehmal.cyou" target="_blank">from Github</a></li>, you probably need to rename the folders to `2d`, `3d`, `iso` & `game`.
+    <li>Optional: Optimize all PNGs to save storage/traffic, e.g. with <a href="https://github.com/static-web-server/static-web-server" target="_blank" rel="noopener">oxipng</a>.</li>
+    <li>Put the whole thing on a server with enough storage.</li>
+    <li>Expose the whole thing with a webserver like <a href="https://github.com/static-web-server/static-web-server" target="_blank" rel="noopener">Static Web Server</a> & maybe put it behind Cloudflare with a <a href="https://github.com/static-web-server/static-web-server" target="_blank" rel="noopener">Cloudflare Tunnel</a></li>
   </ol>
 
   <hr>
