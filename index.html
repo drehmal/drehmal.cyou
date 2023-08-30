@@ -194,13 +194,14 @@
       console.log("URL:" + url);
       console.log("URL_SPLIT:" + url.split('#'));
       var page = url.split('#')[1];
-      var path = page.split('/')[1];
+      var path = page.slice(page.indexOf('/') + 1);
       page = page.split('/')[0]
       console.log("PAGE:" + page);
       current_page = page;
       console.log("PATH:" + path);
-      document.getElementById("frameContainer").src = url_map(page);
-
+      // set url
+      console.log("RECONSTRUCTED:" + url_map(page) + "#" + path)
+      document.getElementById("frameContainer").src = url_map(page) + "#" + path;
     }
 
     // log iframe url changes including hash changes
