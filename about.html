@@ -45,13 +45,22 @@
         <li><a href="https://dl.drehmal.cyou/2.2/drehmal_render.conf" target="_blank" rel="noopener">Download &amp; edit my config</a></li>
         <li>Run the render</li>
         <li>The <code>--genpoi</code> of Overviewer broke with 1.17, so instead use the alternative I wrote: <a href="https://github.com/Zottelchen/poigen/releases/tag/latest" target="_blank" rel="noopener">POIGen</a></li>
-        <li>Time to get required icon textures. TOBECOMPLETED</li>
+        <li>Download Minecraft 1.18.2 with Fabric and install <a href="https://modrinth.com/mod/rend" target="_blank" rel="noopener">Rend</a>.</li>
+        <li>Start the instance and load the Drehmal datapack.</li>
+        <li>Load into a world.</li>
+        <li>Open the Rend Interface. Render Blocks. Enter <code>minecraft</code> as namespace. You can render it at 16x16 or resize later. Check the option to change the filename to identifier.</li>
+        <li>Goto the folder Rend created and rename it to icons. Move it into the Overviewer Render export folder.</li>
+        <li>Remove the <code>minecraft_</code> from all the filenames in the icons folder. I suggest using something like <a href="https://regexrenamer.sourceforge.net/" target="_blank" rel="noopener">RegexRenamer</a>.</li>
+        <li>Fetch the image of all horse variants from the Minecraft wiki (or anywhere else). Resize to 216x240, convert them to .webp, name them after the internal id (first should be <code>0</code> last should be <code>1030</code>) and put them into the <code>horses</code> subfolder.</li>
+        <li>Fetch marker images, either by creating them or also pulling them from the Wiki (I like to use mob faces). Resize them to 28x28 and put them into the <code>markers</code> subfolder. (You need the following marker images: <code>armor_stand.png, barrel.png, bee.png, book.png, cat.png, chest.png, chest_red.png, chicken.png, cow.png, donkey.png, drowned.png, elder_guardian.png, enchanted_book.png, fox.png, horse.png, item_frame.png, lectern.png, llama.png, map.png, marker_tower_red.png, marker_town.png, mooshroom.png, ocelot.png, panda.png, parrot.png, pig.png, polar_bear.png, rabbit.png, sheep.png, spawner.png, turtle.png, villager.png, wolf.png</code>)</li>
+
       </ol>
     </li>
-    <li>Insert all folders into the page folder, you can get it <a href="https://github.com/drehmal/drehmal.cyou" target="_blank">from Github</a></li>, you probably need to rename the folders to `2d`, `3d`, `iso` & `game`.
+    <li>Insert all folders into the page folder, you can get it <a href="https://github.com/drehmal/drehmal.cyou" target="_blank">from Github</a></li>, you probably need to rename the folders to <code>2d</code>, <code>3d</code>, <code>iso</code> &amp; <code>game</code>.
     <li>Optional: Optimize all PNGs to save storage/traffic, e.g. with <a href="https://github.com/static-web-server/static-web-server" target="_blank" rel="noopener">oxipng</a>.</li>
     <li>Put the whole thing on a server with enough storage.</li>
     <li>Expose the whole thing with a webserver like <a href="https://github.com/static-web-server/static-web-server" target="_blank" rel="noopener">Static Web Server</a> & maybe put it behind Cloudflare with a <a href="https://github.com/static-web-server/static-web-server" target="_blank" rel="noopener">Cloudflare Tunnel</a></li>
+    <li>Done. Now be gay & do crime.🏳‍🌈🦴🎺🎺</li>
   </ol>
 
   <hr>
